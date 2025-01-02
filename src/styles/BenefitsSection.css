@@ -1,0 +1,78 @@
+.benefits-section {
+    background-color: #0f172a;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.benifit-button {
+    background-color: transparent;
+    color: #1BD1C2;
+    border: 1px solid #848EA033;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 20px auto;
+    display: inline-block;
+}
+
+.title {
+    font-size: 44px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.benenits-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.benenits-card {
+    background-color: #152232;
+    width: 383px;
+    height: 276px;
+    border-radius: 10px;
+    border: 1px solid #848EA033;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.benenits-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #14b8a6;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.Benifit-Bg-left {
+    left: 0;
+    position: absolute;
+    opacity: 13%;
+}
+
+.Benifit-Bg-right {
+    right: 0;
+    position: absolute;
+    opacity: 13%;
+    transform: rotateY(180deg);
+}

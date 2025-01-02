@@ -1,0 +1,108 @@
+.body {
+    font-family: "Instrument Sans";
+}
+
+.dashboard {
+    position: relative;
+    align-items: center;
+    background: linear-gradient(to right, #e4ecf6,
+            #fef5f3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dashboard-content {
+    padding: 10px;
+    background-color: #CFD8E34D;
+    width: 80%;
+    border-radius: 25px;
+}
+
+.dashboard-content p {
+    font-family: "Instrument Sans";
+}
+
+.ai-agent-link a {
+    color: #000;
+    font-family: "Instrument Sans";
+}
+
+.Dashboard-image img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+.Chart1,
+.Chart2 {
+    position: absolute;
+    width: 212px;
+    height: 214;
+    height: auto;
+    z-index: 2;
+}
+
+.Chart1 {
+    left: 5%;
+    top: 24%;
+
+}
+
+.Chart2 {
+    right: 3%;
+    /* Adjust for right-center position */
+    top: 8rem;
+}
+
+.trusted-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 2%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 4%;
+    box-shadow: 70px 0px 20px 80px rgba(255, 255, 255, 0.9);
+    z-index: 3;
+    text-align: center;
+    font-family: "Instrument Sans", sans-serif;
+}
+
+.trusted-container p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 3rem;
+}
+
+.logo-container {
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    padding-bottom: 5%;
+}
+
+.logo-container img {
+    width: 70px;
+}
+
+.features-title {
+    font-size: 1.8rem;
+    color: #333333;
+    margin-bottom: 20px;
+    font-family: "Instrument Sans", sans-serif;
+    text-align: center;
+}
+
+.features-button {
+    background-color: transparent;
+    color: #004CD3;
+    border: 2px solid #848EA033;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 20px auto;
+    display: inline-block;
+}

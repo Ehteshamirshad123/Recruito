@@ -1,0 +1,451 @@
+.body {
+    font-family: "Instrument Sans";
+}
+
+.recruitment-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    background: #FFF;
+    font-family: "Instrument Sans";
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    margin: 6%;
+}
+
+.left-section h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 2.5rem;
+    font-family: "Instrument Sans";
+}
+
+.left-section p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-family: "Instrument Sans";
+}
+
+.candidate-cards {
+    display: flex;
+    gap: 1rem;
+    margin-right: 3.5rem;
+    margin-top: 1rem;
+    background: #fff;
+    border-radius: 25px;
+    border: 1px solid #8787871A;
+    width: 582px;
+    height: 424px;
+    justify-content: space-between;
+    gap: 12%;
+}
+
+.candidate-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin: 4rem 1rem 3rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    width: 232px;
+    height: 288px;
+    z-index: 1;
+    font-family: "Instrument Sans";
+}
+
+
+
+.candidate-card.highlighted {
+    border: 2px solid #2ecc71;
+    position: absolute;
+    width: 276px;
+    height: 288px;
+    right: 14%;
+    z-index: 3;
+    font-family: "Instrument Sans";
+}
+
+.candidate-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.skills span {
+    display: inline-block;
+    background: #E6E8EC4F;
+    color: #34495e;
+    padding: 0.5rem 0.9rem;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    margin: 0.2rem;
+    font-family: "Instrument Sans";
+    cursor: pointer;
+}
+
+.filter {
+    width: 582px;
+    height: 424px;
+    border-radius: 25px;
+    border: 1px solid #848EA033;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+.resume-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 3rem;
+
+}
+
+.resume-card {
+    flex: 1;
+    height: 3rem;
+    border-radius: 5px;
+}
+
+.resume-card.approved {
+    width: 470px;
+    height: 76px;
+    border: 1px solid #848EA033;
+    border-radius: 25px;
+}
+
+.resume-card.pending {
+    border: 1px solid #848EA033;
+    width: 424px;
+    height: 76px;
+    align-self: center;
+    border-radius: 25px;
+}
+
+.resume-card.rejected {
+    border-radius: 25px;
+    border: 1px solid #848EA033;
+    width: 380px;
+    height: 76px;
+    align-self: center;
+}
+
+.bg-cards {
+    position: absolute;
+    z-index: 0;
+    height: 237px;
+    width: 237px;
+    right: 7%;
+}
+
+.bg-cards img {
+    width: 237px;
+    height: 237px;
+    opacity: 100%;
+
+}
+
+.second-section {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 15px;
+    background-color: transparent;
+    z-index: 3 !important;
+}
+
+
+.card-left {
+    width: 62px;
+    height: 62px;
+    border-radius: 5px;
+    background-color: #2ecc71;
+    z-index: 2;
+    position: relative;
+}
+
+.card-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.card1 {
+    width: 256px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #E6E8EC4D;
+    cursor: pointer;
+    box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card2,
+.card3 {
+    width: 114px;
+    height: 12px;
+    border-radius: 20px;
+    background-color: #E6E8EC4D;
+    cursor: pointer;
+    box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.bg-box2 {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    height: 237px;
+    width: 237px;
+    left: 7%;
+}
+
+.bg-box2 img {
+    width: 237px;
+    height: 237px;
+
+}
+
+.left-text {
+    margin: 10%;
+}
+
+.left-text h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 2.5rem;
+    font-family: "Instrument Sans";
+}
+
+.left-text p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    font-family: "Instrument Sans";
+}
+
+/* Main Container */
+.assessment-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f9faff;
+    top: 0;
+}
+
+/* Online Assessment Section */
+.online-assessment {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #ffffff;
+    border-radius: 12px;
+}
+
+.online-assessment-left {
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+    left: 5%;
+
+}
+
+.checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 582px;
+    height: 424px;
+    border-radius: 25px;
+    border: 1px solid #E6E8EC;
+    z-index: 1;
+    margin-right: 5%;
+}
+
+.checklist-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 503px;
+    height: 336px;
+    border-radius: 25px;
+    background-color: #FFF;
+    border: 1px solid #E6E8EC;
+    margin: 3rem;
+    align-items: center;
+    z-index: 2;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: 12px;
+    width: 396px;
+    height: auto;
+    background: #fff;
+    color: #0B1928;
+    font-weight: 500;
+    border-radius: 10px;
+    border: 1px solid #E6E8EC;
+
+}
+
+.check-item.completed {
+    background: #fff;
+    color: #848EA0;
+    text-decoration: line-through;
+}
+
+/* AI Video Interviews Section */
+.ai-video-interviews {
+    background: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.ai-interviews-left {
+    width: 582px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #848EA033;
+    margin-left: 5%;
+}
+
+.image-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container {
+    margin-top: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.interview-image {
+    width: 462px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.score-circle {
+    position: absolute;
+    width: 163px;
+    height: 187px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    top: 20%;
+    right: -10%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ai-interviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 5%;
+}
+
+/* Main Container */
+.shortlist-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+}
+
+/* Right Section - Cards */
+.shortlist-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 3rem;
+}
+
+.shortlist-card {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 16px 24px;
+    gap: 16px;
+    position: relative;
+}
+
+.candidate-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.candidate-details {
+    flex-grow: 1;
+}
+
+.candidate-name {
+    font-size: 1rem;
+    color: #333333;
+    font-weight: bold;
+    display: block;
+}
+
+.candidate-rank {
+    font-size: 0.9rem;
+    color: #888888;
+}
+
+.candidate-score {
+    width: 48px;
+    height: 48px;
+    background: #e8f5e9;
+    border: 2px solid #4caf50;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4caf50;
+    font-weight: bold;
+    font-size: 0.9rem;
+}

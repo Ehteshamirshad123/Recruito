@@ -1,0 +1,81 @@
+.body {
+    font-family: "Instrument Sans";
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to right, #e4ecf6,
+            #fef5f3);
+    font-family: 'Instrument Sans';
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-family: 'Instrument Sans';
+    font-weight: 600;
+}
+
+.hero .highlight {
+    background-image: linear-gradient(to right, #1acdc1, #1e72e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+
+}
+
+.hero p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+    font-family: 'Instrument Sans';
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.cta-primary {
+    padding: 10px 30px;
+    background-color: transparent;
+    color: #0b0404;
+    border: 2px solid #666;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Instrument Sans';
+    font-weight: bold;
+}
+
+.cta-secondary {
+    padding: 10px 30px;
+    background: linear-gradient(to right, #1AD7BE, #1F67E7);
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Instrument Sans';
+}
+
+.bgbox {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 537px;
+    height: 502px;
+    opacity: 50%;
+}
+
+.bgboxleft {
+    position: absolute;
+    left: 0;
+    top: 337px;
+    width: 537px;
+    height: 502px;
+    opacity: 50%;
+    transform: rotate(180deg);
+    z-index: 1;
+}

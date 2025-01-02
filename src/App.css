@@ -1,0 +1,12 @@
+body {
+  font-family: 'Arial, sans-serif';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #e4ecf6,
+      #fef5f3);
+}
+
+.App {
+  text-align: center;
+}
