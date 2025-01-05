@@ -6,6 +6,8 @@ import Condidates from "./components/Condidates";
 import BenefitsSection from "./components/BenefitsSection";
 import FAQ from './components/FAQ';
 import Testimonials from './components/Testimonials'
+import EnhanceHiring from './components/EnhanceHiring';
+import Footer from './components/Footer';
 import './App.css';
 
 
@@ -19,6 +21,8 @@ function App() {
       <BenefitsSection/>
       <FAQ/>
       <Testimonials/>
+      <EnhanceHiring/>
+      <Footer/>
       </div>
   );
 }

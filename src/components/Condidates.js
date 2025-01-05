@@ -1,18 +1,119 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/Condidates.css";
 import Alex from "../Assets/images/Alex.jpg";
 import Ryan from "../Assets/images/Ryan.jpg";
 import Rivera from "../Assets/images/Rivera.jpg";
 import BGCARD from "../Assets/images/bgcard.png";
 import Call from "../Assets/images/Call.png";
+import Read from "../Assets/images/read.svg"
+import Verified from "../Assets/images/verified.svg"
+const Condidates = () => {
+
+
+const [radius,setradius]=useState();
+const [percentage,setpercentage]=useState();
+const [transform,settransform]=useState();
+const [marks,setmarks]=useState();
+
 
 const candidates = [
-  { name: "Ryan", rank: "Senior Graphic Designer", image: Ryan, score: "85%" },
-  { name: "Alex Martin", rank: "Senior Graphic Designer", image: Alex, score: "92%" },
-  { name: "Emma Rivera", rank: "Graphic Designer", image: Rivera, score: "80%" },
+  { name: "Ryan Lee", rank: "Senior Graphic Designer", tag: "#1", image: Ryan, score: "85%" },
+  { name: "Alex Martin", rank: "Senior Graphic Designer", tag: "#2", image: Alex, score: "92%" },
+  { name: "Emma Rivera", rank: "Senior Graphic Designer", tag: "#2", image: Rivera, score: "80%" },
 ];
 
-const Condidates = () => {
+const [checklist, setChecklist] = useState([
+  { id: 1, name: "Creative Design Skills Test", isChecked: true },
+  { id: 2, name: "UX/UI Design Challenge", isChecked: true },
+  { id: 3, name: "Problem-Solving Task", isChecked: true },
+  { id: 4, name: "Trends Awareness Quiz Test", isChecked: false },
+]);
+
+useEffect(()=>
+{
+
+  window.addEventListener("resize", () => {
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+  
+    console.log(`Screen Width: ${screenWidth}, Screen Height: ${screenHeight}`);
+     if( screenWidth>860)
+      {
+        setradius(60)
+        setpercentage("2rem")
+        settransform("90 45")
+        setmarks("50%")
+      }
+    else if (screenWidth < 860 && screenWidth>768 ) {
+      setradius(40)
+      setpercentage("0.8rem")
+      settransform("75 45")
+      setmarks("35%")
+    } else if( screenWidth<=768 && screenWidth>=600)
+    {
+      setradius(40)
+      setpercentage("0.5rem")
+      settransform("70 45")
+      setmarks("34%")
+    }
+    else if( screenWidth<600 && screenWidth>480)
+      {
+        setradius(30)
+        setpercentage("0.25rem")
+        settransform("60 45")
+        setmarks("32%")
+      }
+  });
+},[])
+
+
+const Circle = ({ colour, pct }) => {
+  const r = radius||60;
+  const circ = 2 * Math.PI * r;
+  const strokePct = ((100 - pct) * circ) / 100;
+  return (
+    <circle
+      r={r}
+      cx={50}
+      cy={50}
+      
+      fill="transparent"
+      stroke={strokePct !== circ ? colour : ""} // remove colour as 0% sets full circumference
+      strokeWidth={"1rem"}
+      strokeDasharray={circ}
+      strokeDashoffset={pct ? strokePct : 0}
+      strokeLinecap="square"
+
+    ></circle>
+  );
+};
+const Text = ({ percentage1,percentage,marks }) => {
+  return (
+    <text
+      x={marks}
+      y="40%"
+      dominantBaseline="central"
+      textAnchor="middle"
+      fontSize={percentage}
+    >
+      {percentage1.toFixed(0)}%
+    </text>
+  );
+};
+
+ // Handle checkbox toggle
+ const handleCheck = (id) => {
+  setChecklist((prevChecklist) =>
+    prevChecklist.map((item) =>
+      item.id === id ? { ...item, isChecked: !item.isChecked } : item
+    )
+  );
+};
+
+
+
+
+
   return (
     <div className="recruitment-component">
       {/* Candidate Sourcing Section */}
@@ -33,11 +134,12 @@ const Condidates = () => {
               key={index}
               className={`candidate-card ${candidate.name === "Alex Martin" ? "highlighted" : ""}`}
             >
+             {candidate.name === "Alex Martin" && <img src={Verified} alt="Verified" className="verified-badge" />}
               <img src={candidate.image} alt={candidate.name} />
               <h3>{candidate.name}</h3>
               <p>{candidate.rank}</p>
               <div className="skills">
-                {candidate.name === "Ryan" && (
+                {candidate.name === "Ryan Lee" && (
                   <>
                     <span>Creative Suite</span>
                     <span>Marketing</span>
@@ -67,23 +169,33 @@ const Condidates = () => {
 
       {/* Resume Screening Section */}
       <div className="second-section">
-        <div className="filter">
+          <div className="list-container">
           <img className="bg-box2" src={BGCARD} alt="Background" />
-          <div className="resume-filter">
-            {["approved", "pending", "rejected"].map((status, index) => (
-              <div key={index} className={`resume-card ${status}`}>
-                <div className="card">
-                  <div className="card-left">Yes</div>
-                  <div className="card-right">
-                    <div className="card1"></div>
-                    <div className="card2"></div>
-                    <div className="card3"></div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+      <div className="list-item">
+        <div className="icon green"> <img className="" src={Read} alt="Background" /></div>
+        <div className="content">
+        <div className="line long"></div>
+          <div className="line short"></div>
+          <div className="line short"></div>
         </div>
+      </div>
+      <div className="list-item1">
+        <div className="icon orange"> <img className="" src={Read} alt="Background" /></div>
+        <div className="content">
+          <div className="line long"></div>
+          <div className="line short"></div>
+          <div className="line short"></div>
+        </div>
+      </div>
+      <div className="list-item2">
+        <div className="icon blue"> <img className="" src={Read} alt="Background" /></div>
+        <div className="content">
+        <div className="line long"></div>
+          <div className="line short"></div>
+          <div className="line short"></div>
+        </div>
+      </div>
+    </div>
         <div className="left-text">
           <h2>Automated Resume <br /> Screening & Filtering</h2>
           <p>
@@ -104,12 +216,29 @@ const Condidates = () => {
           </div>
           <div className="checklist">
           <img className="bg-cards" src={BGCARD} alt="Background" />
+
+            
+
           <div className="checklist-status">
-            <div className="check-item completed">1. Creative Design Skills Test</div>
-            <div className="check-item completed">2. UX/UI Design Challenge</div>
-            <div className="check-item completed">3. Problem-Solving Task</div>
-            <div className="check-item">4. Trends Awareness Quiz Test</div>
-            </div>
+          {checklist.map((item) => (
+
+
+<div key={item.id} className={`check-item ${item.isChecked ? "completed" : ""}`}>
+          <label>
+            <input
+              type="checkbox"
+             className={`check-input ${item.isChecked ? "checked" : ""}`}
+              checked={item.isChecked}
+              onChange={() => handleCheck(item.id)}
+            />
+            {`${item.id}. ${item.name}`}
+          </label>
+        
+</div>
+
+        
+      ))}
+      </div>
           </div>
         </div>
 
@@ -127,7 +256,22 @@ const Condidates = () => {
               className="interview-image"
             />
             <div className="score-circle">
-              <span>Interviews Score</span>
+          
+            <span>Interviews Score</span>
+             
+
+              
+              <svg width={200} height={200}>
+      <g transform={`rotate(-90 ${transform})`}>
+        <Circle colour="lightgrey" />
+        <Circle colour={'#1BD1C2'} pct={55} />
+      </g>
+      <Text percentage1={78} percentage={percentage} marks={marks}/>
+    </svg>
+             
+
+             
+            
             </div>
           </div>
           </div>
@@ -158,7 +302,7 @@ const Condidates = () => {
               <img src={candidate.image} alt={candidate.name} className="candidate-image" />
               <div className="candidate-details">
                 <span className="candidate-name">{candidate.name}</span>
-                <span className="candidate-rank">{candidate.rank}</span>
+                <span className="candidate-rank">{candidate.tag}</span>
               </div>
               <div className="candidate-score">
                 <span>{candidate.score}</span>

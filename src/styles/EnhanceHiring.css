@@ -1,0 +1,176 @@
+body {
+    font-family: "Instrument Sans";
+}
+
+.enhance-hiring-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffffff;
+    overflow: hidden;
+    padding-top: 5rem;
+    font-family: "Instrument Sans";
+}
+
+.enhace-background {
+    width: 415px;
+    height: 376px;
+}
+
+
+.enhanve-bg {
+    width: 415px;
+    height: 376px;
+}
+
+.enhance-hiring-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    left: 33%;
+    font-family: "Instrument Sans";
+}
+
+.icon-container {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #f0f9ff, #dff2fa);
+    border-radius: 50%;
+}
+
+.hiring-icon {
+    width: 100px;
+    height: auto;
+    border-radius: 100%;
+}
+
+.hiring-heading {
+    font-size: 1.8rem;
+    color: #111827;
+    font-weight: bold;
+    margin: 0;
+}
+
+.request-demo-button {
+    background: linear-gradient(90deg, #1AD7BE, #1F67E7);
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: "Instrument Sans";
+}
+
+@media (max-width: 1300px) {
+    .hiring-heading {
+        font-size: 1.5rem;
+    }
+
+    .request-demo-button {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .enhanve-bg {
+        width: 300px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .hiring-heading {
+        font-size: 1.5rem;
+    }
+
+    .request-demo-button {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .enhanve-bg {
+        width: 300px;
+        height: 250px;
+    }
+
+    .hiring-icon {
+        width: 70px;
+        height: auto;
+    }
+}
+
+@media (max-width: 850px) {
+    .hiring-heading {
+        font-size: 1.2rem;
+    }
+
+    .request-demo-button {
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .enhanve-bg {
+        width: 300px;
+        height: 250px;
+    }
+
+    .hiring-icon {
+        width: 70px;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .hiring-heading {
+        font-size: 1rem;
+    }
+
+    .request-demo-button {
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .enhanve-bg {
+        width: 300px;
+        height: 250px;
+    }
+
+    .hiring-icon {
+        width: 70px;
+        height: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .hiring-heading {
+        font-size: 1.2rem;
+    }
+
+    .request-demo-button {
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .enhanve-bg {
+        width: 300px;
+        height: 250px;
+    }
+
+    .hiring-icon {
+        width: 70px;
+        height: auto;
+    }
+
+    .enhance-hiring-content {
+        left: 10%;
+    }
+}

@@ -2,19 +2,23 @@
     font-family: "Instrument Sans";
 }
 
-.header {
+header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    /* Center horizontally */
     align-items: center;
+    /* Center vertically */
+    flex-direction: row;
+    /* Ensure row direction is maintained */
+    margin: 2rem auto 1rem auto;
+    /* Center the header using auto margins */
     padding: 10px 30px;
     border: 2px solid #fff;
     background-color: #ffffff80;
     width: 70%;
-    justify-self: center;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
     border-radius: 50px;
     font-family: "Instrument Sans";
+    gap: 10rem;
 }
 
 .logo {
@@ -49,4 +53,88 @@
     cursor: pointer;
     font-weight: bold;
     font-family: "Instrument Sans";
+}
+
+/* Responsive Queries */
+@media (max-width: 1024px) {
+    .header {
+        width: 70% !important;
+        padding: 10px 20px !important;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        align-items: center;
+        padding: 15px 20px;
+        max-width: 90% !important;
+    }
+
+    .logo {
+        max-width: 100px;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .contact-button {
+        flex-direction: row;
+        align-items: center;
+        padding: 6px 9px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 686px) {
+    .header {
+        padding: 10px 15px;
+        width: 95% !important;
+    }
+
+    .logo {
+        max-width: 40px;
+    }
+
+    .nav-links a {
+        font-size: 8px;
+    }
+
+    .contact-button {
+        padding: 4px 6px;
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        width: 95% !important;
+    }
+
+    .logo {
+        max-width: 40px;
+    }
+
+    .nav-links a {
+        font-size: 8px;
+    }
+
+    .contact-button {
+        padding: 4px 6px;
+        font-size: 8px;
+    }
 }

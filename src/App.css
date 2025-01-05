@@ -1,12 +1,78 @@
 body {
-  font-family: 'Arial, sans-serif';
+
+  font-family: "Instrument Sans";
   margin: 0;
   padding: 0;
+  width: 100%;
   box-sizing: border-box;
-  background: linear-gradient(to right, #e4ecf6,
-      #fef5f3);
+  background: linear-gradient(to right, #e4ecf6, #fef5f3);
+  overflow-x: hidden;
+  /* Prevent horizontal scrolling */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  /* Ensure consistent box-sizing across all elements */
 }
 
 .App {
-  text-align: center;
+
+  overflow-x: hidden;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 13px;
+  }
+
+  .App {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 12px;
+  }
+
+  .App {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    max-width: 100%;
+  }
+
+  .App {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 11px;
+  }
+
+  .App {
+    overflow-x: hidden;
+    width: 100% !important;
+  }
 }

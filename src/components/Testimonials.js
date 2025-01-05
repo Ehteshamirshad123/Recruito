@@ -1,7 +1,8 @@
-// src/components/Testimonials.js
-
 import React from "react";
 import "../styles/Testimonials.css";
+import Rivera from '../Assets/images/Rivera.jpg';
+import Joe from '../Assets/images/joe.jpg'
+import Alex from '../Assets/images/Alex.jpg'
 
 const Testimonials = () => {
   const testimonials = [
@@ -9,7 +10,7 @@ const Testimonials = () => {
       id: 1,
       name: "Alex Martin",
       role: "Company, HR",
-      image: "https://via.placeholder.com/50", // Replace with actual image URL
+      image: Alex, // Replace with actual image URL
       message:
         "Recruito has transformed our hiring process! We save countless hours each week. The quality of candidates has significantly improved since we started using Recruito.",
     },
@@ -17,7 +18,7 @@ const Testimonials = () => {
       id: 2,
       name: "Jane Doe",
       role: "Company, Manager",
-      image: "https://via.placeholder.com/50", // Replace with actual image URL
+      image: Rivera, // Replace with actual image URL
       message:
         "Using Recruito AI has made hiring effortless. The recommendations are spot on, saving us valuable time and effort.",
     },
@@ -25,7 +26,7 @@ const Testimonials = () => {
       id: 3,
       name: "John Smith",
       role: "Company, CEO",
-      image: "https://via.placeholder.com/50", // Replace with actual image URL
+      image: Joe, // Replace with actual image URL
       message:
         "Recruito is a game-changer. The insights provided are accurate, and the overall efficiency of the hiring process has drastically improved.",
     },
@@ -41,14 +42,22 @@ const Testimonials = () => {
       <div className="testimonials">
         {testimonials.map((testimonial) => (
           <div key={testimonial.id} className="testimonial-card">
+            <div className="testimation-detail">
+              <div >
             <img
               src={testimonial.image}
               alt={`${testimonial.name}'s profile`}
               className="testimonial-image"
             />
+            </div>
+            <div>
             <h3>{testimonial.name}</h3>
             <p className="testimonial-role">{testimonial.role}</p>
-            <p className="testimonial-message">{testimonial.message}</p>
+            </div>
+            </div>
+            <div className="testimonial-message">
+            <p className="">{testimonial.message}</p>
+            </div>
           </div>
         ))}
       </div>

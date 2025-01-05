@@ -1,27 +1,35 @@
+body {
+    font-family: "Instrument Sans";
+}
+
 .faq-main {
     top: 0;
     width: 100%;
-    background: linear-gradient(to top right, #1F67E700, #1F67E71A);
+    background: linear-gradient(to top, #1F67E700, #1F67E71A);
     flex: 1;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+
 }
 
 .faq-container {
     font-family: Arial, sans-serif;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    max-width: 800px;
 }
 
 
 h1 {
-    text-align: center;
+    left: 0;
     margin-bottom: 20px;
     color: #333;
+    font-family: "Instrument Sans";
 }
 
 .faq-item {
     border-bottom: 1px solid #ddd;
-    padding: 10px 0;
+    font-family: "Instrument Sans";
 }
 
 .faq-question {
@@ -31,6 +39,7 @@ h1 {
     background-color: #f9f9f9;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    font-family: "Instrument Sans";
 }
 
 .faq-question.active {
@@ -50,6 +59,7 @@ h1 {
 .faq-answer.show {
     max-height: 200px;
     /* Adjust as needed */
+    font-family: "Instrument Sans";
 }
 
 .faq-image {
@@ -70,6 +80,8 @@ h1 {
     font-size: 14px;
     border-radius: 30px;
     cursor: pointer;
+    margin: 10px;
+    font-family: "Instrument Sans";
 }
 
 @media (max-width: 768px) {

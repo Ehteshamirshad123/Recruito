@@ -10,12 +10,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
 }
 
 .dashboard-content {
     padding: 10px;
     background-color: #CFD8E34D;
-    width: 80%;
+    width: 85%;
     border-radius: 25px;
 }
 
@@ -44,26 +45,27 @@
 }
 
 .Chart1 {
-    left: 5%;
+    left: 3%;
     top: 24%;
 
 }
 
 .Chart2 {
-    right: 3%;
+    right: 2%;
     /* Adjust for right-center position */
-    top: 8rem;
+    top: 9.3rem;
 }
 
 .trusted-container {
     display: flex;
     flex-direction: column;
     width: 100%;
+    left: 0;
     padding-top: 2%;
     background-color: #fff;
     position: absolute;
     bottom: 4%;
-    box-shadow: 70px 0px 20px 80px rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 20px 80px rgba(255, 255, 255, 0.9);
     z-index: 3;
     text-align: center;
     font-family: "Instrument Sans", sans-serif;
@@ -105,4 +107,494 @@
     cursor: pointer;
     margin: 20px auto;
     display: inline-block;
+}
+
+@media (max-width: 1245px) {
+    .Chart1 {
+        left: 2%;
+        top: 25%;
+        width: 180px;
+    }
+
+    .Chart2 {
+        right: 2%;
+        top: 8.2rem;
+        width: 180px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .trusted-container {
+        display: flex;
+        flex-direction: column;
+        width: 95% !important;
+        height: auto;
+        box-shadow: 0px 0px 20px 40px rgba(255, 255, 255, 0.9) !important;
+        bottom: 0;
+    }
+
+    .Dashboard-image img {
+        max-width: 90% !important;
+        height: auto;
+    }
+
+    .Chart1 {
+        left: 8%;
+        top: 25%;
+        width: 180px;
+    }
+
+    .Chart2 {
+        right: 3%;
+        top: 7.5rem;
+        width: 180px;
+    }
+
+    .trusted-container p {
+        font-size: 1rem;
+    }
+
+    .features-title {
+        font-size: 1.6rem;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1050px) {
+    .trusted-container {
+        display: flex;
+        flex-direction: column;
+        width: 95% !important;
+        height: auto;
+        padding: 2rem;
+        box-shadow: 0px 0px 20px 40px rgba(255, 255, 255, 0.9) !important;
+        bottom: -8%;
+    }
+
+    .dashboard-content {
+        width: 90%;
+    }
+
+    .Dashboard-image img {
+        max-width: 100% !important;
+        height: auto;
+    }
+
+    .Chart1 {
+        left: 5%;
+        top: 25%;
+        width: 180px;
+    }
+
+    .Chart2 {
+
+        top: 7.2rem;
+        width: 180px;
+    }
+
+    .trusted-container p {
+        font-size: 1rem;
+    }
+
+    .features-title {
+        font-size: 1.6rem;
+    }
+
+}
+
+@media (min-width: 850px) and (max-width: 975px) {
+    .trusted-container {
+        display: flex;
+        flex-direction: column;
+        width: 95% !important;
+        height: auto;
+    }
+
+    .Dashboard-image img {
+        width: 100% !important;
+        height: auto;
+    }
+
+    .dashboard-content {
+        width: 90%;
+    }
+
+    .Chart1 {
+        left: 3%;
+        top: 25%;
+        width: 150px;
+    }
+
+    .Chart2 {
+        top: 7.3rem !important;
+        width: 150px;
+    }
+
+
+    .trusted-container p {
+        font-size: 1rem;
+    }
+
+    .features-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 975px) and (max-width: 992px) {
+    .trusted-container {
+        display: flex;
+        flex-direction: column;
+        width: 95% !important;
+        height: auto;
+    }
+
+    .Dashboard-image img {
+        max-width: 100% !important;
+        height: auto;
+    }
+
+    .dashboard-content {
+        width: 90%;
+    }
+
+    .Chart1 {
+        left: 3%;
+        top: 25%;
+        width: 150px;
+    }
+
+    .Chart2 {
+
+        top: 7.5rem;
+        width: 150px;
+    }
+
+    .trusted-container {
+        padding: 10px;
+    }
+
+    .trusted-container p {
+        font-size: 1rem;
+    }
+
+    .features-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 850px) {
+    .trusted-container {
+        display: flex;
+        flex-direction: column;
+        width: 95% !important;
+        bottom: 0;
+    }
+
+    .Dashboard-image img {
+        width: 85% !important;
+        height: auto;
+    }
+
+    .dashboard-content {
+        width: 90%;
+    }
+
+    .Chart1 {
+        left: 7%;
+        top: 27%;
+        width: 110px;
+    }
+
+    .Chart2 {
+        top: 6.5rem !important;
+        right: 7%;
+        width: 110px;
+    }
+
+    .logo-container {
+        max-width: 90%;
+    }
+
+    .logo-container img {
+        width: 50px;
+    }
+
+
+    .trusted-container p {
+        font-size: 0.9rem;
+    }
+
+    .features-title {
+        font-size: 1.3rem;
+    }
+
+    .features-button {
+        padding: 7px 15px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .trusted-container {
+        display: flex;
+        flex-direction: column;
+        width: 95% !important;
+        bottom: 0;
+    }
+
+    .Dashboard-image img {
+        width: 100% !important;
+        height: auto;
+    }
+
+    .dashboard-content {
+        width: 90%;
+    }
+
+    .Chart1 {
+        left: 5%;
+        top: 27%;
+        width: 100px;
+    }
+
+    .Chart2 {
+        top: 6.3rem !important;
+        right: 4%;
+        width: 110px;
+    }
+
+    .logo-container {
+        max-width: 85%;
+    }
+
+    .logo-container img {
+        width: 40px;
+    }
+
+    .trusted-container p {
+        font-size: 0.9rem;
+    }
+
+    .features-title {
+        font-size: 1rem;
+    }
+
+    .features-button {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .trusted-container {
+        display: flex;
+        flex-direction: column;
+        width: 95% !important;
+        bottom: 0;
+    }
+
+    .Dashboard-image img {
+        width: 100% !important;
+        height: auto;
+    }
+
+    .dashboard-content {
+        width: 95%;
+    }
+
+    .Chart1 {
+        left: 3%;
+        top: 27%;
+        width: 100px;
+    }
+
+    .Chart2 {
+        top: 6.2rem !important;
+        right: 2%;
+        width: 100px;
+    }
+
+    .logo-container {
+        max-width: 85%;
+    }
+
+    .logo-container img {
+        width: 40px;
+    }
+
+    .trusted-container p {
+        font-size: 0.7rem;
+    }
+
+    .features-title {
+        font-size: 1rem;
+    }
+
+    .features-button {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .trusted-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 95% !important;
+        bottom: 0;
+    }
+
+    .Dashboard-image img {
+        width: 100% !important;
+        height: auto;
+    }
+
+    .dashboard-content {
+        width: 95% !important;
+    }
+
+    .Chart1 {
+        left: 3%;
+        top: 27%;
+        width: 100px;
+    }
+
+    .Chart2 {
+        top: 6.2rem !important;
+        right: 2%;
+        width: 100px;
+    }
+
+    .logo-container {
+        max-width: 75%;
+    }
+
+    .logo-container img {
+        width: 30px;
+    }
+
+    .trusted-container p {
+        font-size: 0.5rem;
+    }
+
+    .features-title {
+        font-size: 0.8rem;
+    }
+
+    .features-button {
+        padding: 4px 7px;
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .trusted-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 100% !important;
+        bottom: 0;
+    }
+
+    .Dashboard-image img {
+        width: 100% !important;
+        height: auto;
+    }
+
+    .dashboard-content {
+        width: 95% !important;
+    }
+
+    .Chart1 {
+        left: 3%;
+        top: 29%;
+        width: 60px;
+    }
+
+    .Chart2 {
+        top: 5.5rem !important;
+        right: 4%;
+        width: 60px;
+    }
+
+    .logo-container {
+        max-width: 65%;
+    }
+
+    .logo-container img {
+        width: 20px;
+    }
+
+    .trusted-container p {
+        font-size: 0.5rem;
+    }
+
+    .features-title {
+        font-size: 0.8rem;
+    }
+
+    .features-button {
+        padding: 4px 7px;
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard {
+        width: 100% !important;
+    }
+
+    .trusted-container {
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+        height: auto !important;
+        box-shadow: 0px 0px 10px 20px rgba(255, 255, 255, 0.9) !important;
+        bottom: -7% !important;
+    }
+
+    .Dashboard-image img {
+        width: 100% !important;
+        height: auto;
+    }
+
+    .dashboard-content {
+        width: 95% !important;
+    }
+
+    .dashboard-content p {
+        padding-left: 10%;
+    }
+
+    .Chart1 {
+        left: 3%;
+        top: 29%;
+        width: 45px;
+    }
+
+    .Chart2 {
+        top: 4.5rem !important;
+        right: 10%;
+        width: 45px;
+    }
+
+    .logo-container {
+        max-width: 65%;
+    }
+
+    .logo-container img {
+        width: 20px;
+    }
+
+    .trusted-container p {
+        font-size: 0.5rem;
+    }
+
+    .features-title {
+        font-size: 0.7rem;
+    }
+
+    .features-button {
+        padding: 4px 7px;
+        font-size: 0.5rem;
+    }
 }
