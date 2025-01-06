@@ -18,7 +18,7 @@ header {
     width: 70%;
     border-radius: 50px;
     font-family: "Instrument Sans";
-    gap: 10rem;
+    justify-content: space-between;
 }
 
 .logo {
@@ -55,10 +55,26 @@ header {
     font-family: "Instrument Sans";
 }
 
+@media (max-width: 1220px) {
+    .header {
+        width: 83% !important;
+        padding: 10px 20px !important;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+}
+
+
 /* Responsive Queries */
 @media (max-width: 1024px) {
     .header {
-        width: 70% !important;
+        width: 80% !important;
         padding: 10px 20px !important;
     }
 
@@ -76,7 +92,7 @@ header {
         flex-direction: row;
         align-items: center;
         padding: 15px 20px;
-        max-width: 90% !important;
+        max-width: 80% !important;
     }
 
     .logo {
@@ -103,7 +119,7 @@ header {
 @media (max-width: 686px) {
     .header {
         padding: 10px 15px;
-        width: 95% !important;
+        width: 90% !important;
     }
 
     .logo {
