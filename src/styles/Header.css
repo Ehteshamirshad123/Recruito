@@ -154,3 +154,41 @@ header {
         font-size: 8px;
     }
 }
+
+@media (max-width: 440px) {
+    .header {
+        width: 95% !important;
+    }
+
+    .logo {
+        max-width: 40px;
+    }
+
+    .nav-links a {
+        font-size: 8px;
+    }
+
+    .contact-button {
+        padding: 4px 6px;
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 415px) {
+    .header {
+        width: 95% !important;
+    }
+
+    .logo {
+        max-width: 30px;
+    }
+
+    .nav-links a {
+        font-size: 6px;
+    }
+
+    .contact-button {
+        padding: 4px 6px;
+        font-size: 8px;
+    }
+}

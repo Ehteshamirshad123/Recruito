@@ -294,12 +294,16 @@ const Text = ({ percentage1,percentage,marks }) => {
             Recruito presents a curated list of the top performers, complete <br/> with interview recordings and evaluations, so you can make a <br/> swift, confident hiring decision.
           </p>
         </div>
-        <div className="checklist">
-        <img className="bg-cards" src={BGCARD} alt="Background" />
+        <div className="shortlist-container">
         <div className="shortlist-cards">
+        <img className="bg-cards" src={BGCARD} alt="Background" />
           {candidates.map((candidate, index) => (
+            <div className="candidate-detail">
+              <div>
+            <img src={candidate.image} alt={candidate.name} className="candidate-image" />
+            </div>
             <div key={index} className="shortlist-card">
-              <img src={candidate.image} alt={candidate.name} className="candidate-image" />
+              
               <div className="candidate-details">
                 <span className="candidate-name">{candidate.name}</span>
                 <span className="candidate-rank">{candidate.tag}</span>
@@ -307,6 +311,7 @@ const Text = ({ percentage1,percentage,marks }) => {
               <div className="candidate-score">
                 <span>{candidate.score}</span>
               </div>
+            </div>
             </div>
           ))}
         </div>

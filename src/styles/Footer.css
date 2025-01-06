@@ -84,9 +84,7 @@ body {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        gap: 5px;
-
-
+        gap: 15px;
     }
 
     .footer-links {
@@ -95,4 +93,16 @@ body {
         justify-content: center !important;
     }
 
+}
+
+@media (max-width: 480px) {
+
+    .Footer-Logos img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer p {
+        font-size: 0.6rem;
+    }
 }

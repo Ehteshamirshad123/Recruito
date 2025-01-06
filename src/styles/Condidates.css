@@ -46,7 +46,7 @@
 .candidate-cards {
     display: flex;
     gap: 1rem;
-    margin-right: 5rem;
+    margin-right: 4rem;
     margin-top: 1rem;
     background: #fff;
     border-radius: 25px;
@@ -112,7 +112,7 @@
     z-index: 0;
     height: 237px;
     width: 237px;
-    right: 10%;
+    right: 8.2%;
 }
 
 .bg-cards img {
@@ -136,7 +136,7 @@
     flex-direction: column;
     gap: 16px;
     padding: 2rem;
-    margin-left: 4rem;
+    margin-left: 3.8rem;
     background: #FFF;
     border-radius: 25px;
     border: 1px solid #848EA033;
@@ -286,9 +286,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
     background: #ffffff;
-    border-radius: 12px;
+    border-radius: 20px;
 }
 
 .online-assessment-left {
@@ -300,8 +299,9 @@
 
 .checklist {
     display: flex;
-    margin-right: 5.8rem;
-    gap: 12px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 5rem;
     border-radius: 20px;
     border: 1px solid #E6E8EC;
 
@@ -401,17 +401,11 @@
 }
 
 .ai-interviews-left {
-    border-radius: 10px;
+    border-radius: 20px;
     border: 1px solid #848EA033;
-    margin-left: 4rem;
+    margin-left: 3.8rem;
 }
 
-/* .image-main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    margin-left: 5rem;
-} */
 
 .image-container {
     margin: 3rem 4rem 3rem 3rem;
@@ -435,8 +429,8 @@
     flex-direction: column;
     font-size: 1rem;
     font-weight: bold;
-    top: 20%;
-    right: -10%;
+    top: 16%;
+    left: 17rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -450,9 +444,12 @@
 /* Main Container */
 .shortlist-container {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background: #fff;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 3.6rem;
+    margin-left: 3.5rem;
+    padding-bottom: 2rem;
+
 }
 
 /* Right Section - Cards */
@@ -460,7 +457,13 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 3rem;
+    width: 537px;
+    height: 424px;
+    height: auto;
+    padding: 2rem;
+    margin-right: 0.5rem;
+    border-radius: 20px;
+    border: 1px solid #E6E8EC;
 }
 
 .shortlist-card {
@@ -470,8 +473,9 @@
     box-shadow: 0 4px 20px #0000001A;
     border-radius: 12px;
     border: 1px solid #848EA033;
-    padding: 16px 40px;
+    padding: 10px 25px;
     gap: 16px;
+    width: 396px;
     position: relative;
     transform: rotate(-1.43deg);
 }
@@ -483,11 +487,17 @@
     object-fit: cover;
 }
 
+.candidate-detail {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
 .candidate-details {
     flex-grow: 1;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 20px;
 }
 
@@ -520,10 +530,14 @@
     text-decoration: line-through;
 }
 
-@media (max-width: 1224px) {
+@media (max-width: 1250px) {
 
     .checklist-status {
         width: 427px;
+    }
+
+    .shortlist-container {
+        margin-right: 2rem;
     }
 
 
@@ -557,6 +571,11 @@
 
     .left-section p {
         font-size: 1rem;
+    }
+
+    .shortlist-cards {
+        margin-right: 2rem;
+        width: 460px;
     }
 }
 
@@ -669,7 +688,7 @@
     .score-circle {
         width: 180px;
         height: 180px;
-        right: -25%;
+        right: 5%;
     }
 
     .shortlist-card {
@@ -737,13 +756,15 @@
     .check-input.checked::after {
         font-size: 35px;
     }
+
+    .shortlist-cards {
+        width: 450px;
+        padding: 1rem;
+    }
 }
 
 
 @media (max-width: 854px) {
-
-
-
     .candidate-cards {
         width: 350px;
         height: 50%;
@@ -872,9 +893,21 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
+
+    .shortlist-cards {
+        width: 350px;
+        padding: 1rem;
+        margin-right: 1rem;
+    }
+
+    .shortlist-card {
+        width: 300px;
+    }
+
     .score-circle {
         width: 150px;
         height: 150px;
+        left: 13rem;
     }
 
     .score-circle span {
@@ -989,6 +1022,17 @@
         width: 230px;
     }
 
+
+    .shortlist-cards {
+        width: 350px;
+        padding: 1rem;
+        margin-right: 1rem;
+    }
+
+    .shortlist-card {
+        width: 300px;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -1097,10 +1141,9 @@
 
     }
 
-    /* .score-circle {
-        width: 130px;
-        height: 120px;
-    } */
+    .score-circle {
+        left: 9rem;
+    }
 
     .score-circle span {
         font-size: 10px;
@@ -1116,10 +1159,12 @@
 
     .shortlist-cards {
         padding: 1rem;
+        width: 300px;
     }
 
     .shortlist-card {
         padding: 10px 20px;
+        width: 250px;
     }
 
     .checklist {
@@ -1163,7 +1208,7 @@
     .score-circle {
         width: 120px;
         height: 120px;
-        right: -13%;
+        right: 23%;
     }
 
     .icon.green {
@@ -1249,6 +1294,7 @@
         margin-left: 1rem;
     }
 
+
 }
 
 @media (max-width: 555px) {
@@ -1262,7 +1308,7 @@
     .score-circle {
         width: 120px;
         height: 120px;
-        right: -13%;
+        right: 23%;
     }
 
     .bg-box2 {
@@ -1321,10 +1367,10 @@
     }
 
     .checklist {
-        width: 350px;
+        width: 320px;
         height: auto !important;
         justify-content: center;
-        margin-right: 8%;
+        margin-right: 2rem;
     }
 
     .checklist-status {
@@ -1353,6 +1399,23 @@
     .check-input {
         width: 20px;
         height: 20px;
+    }
+
+    .shortlist-container {
+        margin: 0;
+    }
+
+    .shortlist-cards {
+        width: 300px;
+    }
+
+    .shortlist-card {
+        width: 200px;
+    }
+
+    .bg-cards {
+        width: 150px;
+
     }
 
 }
@@ -1424,7 +1487,7 @@
     .score-circle {
         width: 120px;
         height: 120px;
-        right: -13%;
+        right: 25%;
     }
 
 
@@ -1490,9 +1553,25 @@
         width: 20px;
         height: 20px;
     }
+
+    .candidate-image {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .shortlist-cards {
+        width: 260px;
+    }
+
+    .shortlist-card {
+        width: 180px;
+    }
 }
 
 @media (max-width: 450px) {
+
     .candidate-cards {
         width: 250px;
         padding: 0;
@@ -1512,6 +1591,11 @@
         width: 150px;
     }
 
+    .candidate-card img {
+        width: 25px;
+        height: 25px;
+    }
+
     .skills span {
         padding: 0.2rem 0.2rem !important;
         font-size: 5px;
@@ -1522,7 +1606,40 @@
     }
 
     .bg-box2 {
-        left: 3.1%;
+        width: 150px;
+        height: 150px;
+        left: 4%;
+    }
+
+    .list-container {
+        padding: 0.5rem;
+        margin-left: 1rem;
+    }
+
+    .list-item {
+        width: 200px;
+        height: 50px;
+        padding: 0;
+
+    }
+
+    .list-item1 {
+        width: 170px;
+        height: 50px;
+        padding: 0;
+
+    }
+
+    .list-item2 {
+        width: 150px;
+        height: 50px;
+
+    }
+
+    .icon.icon.orange {
+        width: 30px;
+        height: auto;
+        margin: 5px;
     }
 
     .icon.green {
@@ -1531,14 +1648,10 @@
         margin: 5px;
     }
 
-    .icon.orange {
-        width: 30px;
-        height: auto;
-    }
-
     .icon.blue {
         width: 30px;
         height: auto;
+        margin: 5px;
     }
 
     .icon.orange img {
@@ -1554,9 +1667,9 @@
     }
 
     .score-circle {
-        width: 120px;
-        height: 120px;
-        right: 20%;
+        width: 110px;
+        height: 110px;
+        right: 40% !important;
     }
 
     .image-container {
@@ -1572,7 +1685,7 @@
 
 
     .left-section h2 {
-        font-size: 1rem !important;
+        font-size: 0.8rem !important;
     }
 
     .left-section p {
@@ -1580,7 +1693,7 @@
     }
 
     .left-text h2 {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .left-text p {
@@ -1604,7 +1717,7 @@
     }
 
     .checklist {
-        width: 280px;
+        width: 220px;
         height: auto !important;
         justify-content: center;
         margin-right: 5%;
@@ -1636,5 +1749,25 @@
     .check-input {
         width: 20px;
         height: 20px;
+    }
+
+    .shortlist-container {
+        padding: 1rem;
+    }
+
+    .shortlist-cards {
+        padding: 0. 5rem;
+        width: 237px;
+        margin-right: -1rem;
+    }
+
+    .shortlist-card {
+        width: 160px;
+    }
+
+    .candidate-score {
+        width: 25px;
+        height: 25px;
+        font-size: 0.4rem;
     }
 }
