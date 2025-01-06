@@ -266,7 +266,7 @@ const Text = ({ percentage1,percentage,marks }) => {
         <Circle colour="lightgrey" />
         <Circle colour={'#1BD1C2'} pct={55} />
       </g>
-      <Text percentage1={78} percentage={percentage} marks={marks}/>
+      <Text percentage1={98} percentage={percentage} marks={marks}/>
     </svg>
              
 

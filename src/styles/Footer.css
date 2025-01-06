@@ -66,14 +66,14 @@ body {
     font-family: "Instrument Sans";
 }
 
-.footer-terms a {
+.footer-terms p {
     color: #6c757d;
     text-decoration: none;
     transition: color 0.3s;
 
 }
 
-.footer-terms a:hover {
+.footer-terms p:hover {
     color: #007bff;
 }
 

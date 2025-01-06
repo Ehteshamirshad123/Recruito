@@ -29,8 +29,8 @@ const Footer = () => {
         <img src={In} alt="LinkedIn" className="" />
         </div>
         <div className="footer-terms">
-          <a href="#">Terms</a>
-          <a href="#">Privacy</a>
+          <p>Terms</p>
+          <p>Privacy</p>
         </div>
       </div>
 
