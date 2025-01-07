@@ -34,7 +34,7 @@ const Testimonials = () => {
 
   return (
     <div className="testimonials-container">
-      <h2>Testimonials</h2>
+      <h1>Testimonials</h1>
       <h2>
         Don’t just take our word for it—see what our clients say about Recruito
         AI.
