@@ -35,10 +35,10 @@ const Testimonials = () => {
   return (
     <div className="testimonials-container">
       <h2>Testimonials</h2>
-      <p>
+      <h2>
         Don’t just take our word for it—see what our clients say about Recruito
         AI.
-      </p>
+      </h2>
       <div className="testimonials">
         {testimonials.map((testimonial) => (
           <div key={testimonial.id} className="testimonial-card">
