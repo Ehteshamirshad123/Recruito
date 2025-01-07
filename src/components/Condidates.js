@@ -6,6 +6,8 @@ import Rivera from "../Assets/images/Rivera.jpg";
 import BGCARD from "../Assets/images/bgcard.png";
 import Call from "../Assets/images/Call.png";
 import Read from "../Assets/images/read.svg"
+import ReadOrange from "../Assets/images/read-orange.svg"
+import ReadBlue from "../Assets/images/read-blue.svg"
 import Verified from "../Assets/images/verified.svg"
 const Condidates = () => {
 
@@ -180,7 +182,7 @@ const Text = ({ percentage1,percentage,marks }) => {
         </div>
       </div>
       <div className="list-item1">
-        <div className="icon orange"> <img className="" src={Read} alt="Background" /></div>
+        <div className="icon orange"> <img className="" src={ReadOrange} alt="Background" /></div>
         <div className="content">
           <div className="line long"></div>
           <div className="line short"></div>
@@ -188,7 +190,7 @@ const Text = ({ percentage1,percentage,marks }) => {
         </div>
       </div>
       <div className="list-item2">
-        <div className="icon blue"> <img className="" src={Read} alt="Background" /></div>
+        <div className="icon blue"> <img className="" src={ReadBlue} alt="Background" /></div>
         <div className="content">
         <div className="line long"></div>
           <div className="line short"></div>

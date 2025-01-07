@@ -12,7 +12,6 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Logo and Brand Name */}
         <div className="footer-logo">
             <div>
           <img src={Logo} alt="Logo" className="logo" />
