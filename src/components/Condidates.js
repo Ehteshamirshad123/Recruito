@@ -8,16 +8,9 @@ import Call from "../Assets/images/Call.png";
 import Read from "../Assets/images/read.svg"
 import ReadOrange from "../Assets/images/read-orange.svg"
 import ReadBlue from "../Assets/images/read-blue.svg"
-import Verified from "../Assets/images/verified.svg"
+import Verified from "../Assets/images/verified.svg";
+import Search from "../Assets/images/Search.svg";
 const Condidates = () => {
-
-
-const [radius,setradius]=useState();
-const [percentage,setpercentage]=useState();
-const [transform,settransform]=useState();
-const [marks,setmarks]=useState();
-
-
 const candidates = [
   { name: "Ryan Lee", rank: "Senior Graphic Designer", tag: "#1", image: Ryan, score: "85%" },
   { name: "Alex Martin", rank: "Senior Graphic Designer", tag: "#2", image: Alex, score: "92%" },
@@ -31,77 +24,77 @@ const [checklist, setChecklist] = useState([
   { id: 4, name: "Trends Awareness Quiz Test", isChecked: false },
 ]);
 
-useEffect(()=>
-{
+const [styleProps, setStyleProps] = useState({
+  radius: 60,
+  percentage: "2rem",
+  transform: "90 45",
+  marks: "50%"
+});
 
-  window.addEventListener("resize", () => {
+useEffect(() => {
+  const handleResize = () => {
+    console.log("setStyleProps:", setStyleProps);
     const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight;
-  
-    console.log(`Screen Width: ${screenWidth}, Screen Height: ${screenHeight}`);
-     if( screenWidth>860)
-      {
-        setradius(60)
-        setpercentage("2rem")
-        settransform("90 45")
-        setmarks("50%")
-      }
-    else if (screenWidth < 860 && screenWidth>768 ) {
-      setradius(40)
-      setpercentage("0.8rem")
-      settransform("75 45")
-      setmarks("35%")
-    } else if( screenWidth<=768 && screenWidth>=600)
-    {
-      setradius(40)
-      setpercentage("0.5rem")
-      settransform("70 45")
-      setmarks("34%")
+
+    if (screenWidth > 860) {
+      setStyleProps({ radius: 60, percentage: "2rem", transform: "90 45", marks: "50%" });
+    } else if (screenWidth <= 860 && screenWidth > 768) {
+      setStyleProps({ radius: 50, percentage: "0.8rem", transform: "80 45", marks: "45%" });
+    } else if (screenWidth <= 768 && screenWidth >= 600) {
+      setStyleProps({ radius: 40, percentage: "0.5rem", transform: "70 45", marks: "34%" });
+    } else if (screenWidth < 600 && screenWidth > 480) {
+      setStyleProps({ radius: 25, percentage: "0.5rem", transform: "60 45", marks: "32%" });
     }
-    else if( screenWidth<600 && screenWidth>480)
-      {
-        setradius(30)
-        setpercentage("0.25rem")
-        settransform("60 45")
-        setmarks("32%")
-      }
-  });
-},[])
+  };
+
+  window.addEventListener("resize", handleResize);
+  handleResize();
+
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
 
 
-const Circle = ({ colour, pct }) => {
-  const r = radius||60;
-  const circ = 2 * Math.PI * r;
-  const strokePct = ((100 - pct) * circ) / 100;
+
+const Circle = ({ colour, pct, radius }) => {
+  const r = radius; // Radius of the circle
+  const circ = 2 * Math.PI * r; // Circumference
+  const strokePct = ((100 - pct) * circ) / 100; // Stroke offset for the progress
+
   return (
     <circle
       r={r}
-      cx={50}
-      cy={50}
-      
+      cx="50%"
+      cy="50%"
       fill="transparent"
-      stroke={strokePct !== circ ? colour : ""} // remove colour as 0% sets full circumference
-      strokeWidth={"1rem"}
+      stroke={strokePct !== circ ? colour : "transparent"} // Stroke color for progress
+      strokeWidth="10"
       strokeDasharray={circ}
-      strokeDashoffset={pct ? strokePct : 0}
-      strokeLinecap="square"
-
+      strokeDashoffset={pct ? strokePct : 0} // Stroke offset based on percentage
+      strokeLinecap="round"
     ></circle>
   );
 };
-const Text = ({ percentage1,percentage,marks }) => {
+
+const Text = ({ percentage }) => {
+  const screenWidth = window.innerWidth;
+  const fontSize = screenWidth <= 600 ? "1rem" : "1.5rem";
+  const fontWeight = screenWidth <= 600 ? "normal" : "bold";
+  
   return (
     <text
-      x={marks}
-      y="40%"
-      dominantBaseline="central"
+      x="50%"
+      y="50%"
+      dominantBaseline="middle"
       textAnchor="middle"
-      fontSize={percentage}
+      fontSize={fontSize}
+      fill="#1BD1C2"
+      fontWeight={fontWeight}
     >
-      {percentage1.toFixed(0)}%
+      {percentage}%
     </text>
   );
 };
+
 
  // Handle checkbox toggle
  const handleCheck = (id) => {
@@ -112,14 +105,12 @@ const Text = ({ percentage1,percentage,marks }) => {
   );
 };
 
-
-
-
-
   return (
     <div className="recruitment-component">
       {/* Candidate Sourcing Section */}
+      
       <div className="section">
+      <img className="bg-recruitment" src={BGCARD} alt="Background" />
         <div className="left-section">
           <h2>Candidate Sourcing & <br /> Job Posting</h2>
           <p>
@@ -197,6 +188,8 @@ const Text = ({ percentage1,percentage,marks }) => {
           <div className="line short"></div>
         </div>
       </div>
+      <img src={Search} alt="Search" className="interview-Search" />
+
     </div>
         <div className="left-text">
           <h2>Automated Resume <br /> Screening & Filtering</h2>
@@ -218,9 +211,6 @@ const Text = ({ percentage1,percentage,marks }) => {
           </div>
           <div className="checklist">
           <img className="bg-cards" src={BGCARD} alt="Background" />
-
-            
-
           <div className="checklist-status">
           {checklist.map((item) => (
 
@@ -236,9 +226,7 @@ const Text = ({ percentage1,percentage,marks }) => {
             {`${item.id}. ${item.name}`}
           </label>
         
-</div>
-
-        
+</div>  
       ))}
       </div>
           </div>
@@ -248,45 +236,37 @@ const Text = ({ percentage1,percentage,marks }) => {
         
       </div>
       <div className="ai-video-interviews">
-      <div className="ai-interviews-left">
-      <img className="bg-box2" src={BGCARD} alt="Background" />
-         <div className="image-main">
-          <div className="image-container">
-            <img
-              src={Call}
-              alt="Interview"
-              className="interview-image"
-            />
-            <div className="score-circle">
-          
-            <span>Interviews Score</span>
-             
+  <div className="ai-interviews-left">
 
-              
-              <svg width={200} height={200}>
-      <g transform={`rotate(-90 ${transform})`}>
-        <Circle colour="lightgrey" />
-        <Circle colour={'#1BD1C2'} pct={55} />
-      </g>
-      <Text percentage1={98} percentage={percentage} marks={marks}/>
-    </svg>
-             
+  <img className="bg-box2" src={BGCARD} alt="Background" />
 
-             
-            
-            </div>
-          </div>
-          </div>
-          </div>
-          <div className="left-text">
-
-          <h2>AI Video Interviews</h2>
-          <p>
-            An AI-driven virtual interviewer conducts dynamic, adaptive<br/> interviews, capturing
-            both technical insights and soft skills.<br/> Everything is entirely hands-free.
-          </p>
-          </div>
+    <div className="image-main">
+      <div className="image-container">
+        <img src={Call} alt="Interview" className="interview-image" />
+        <div className="score-circle">
+          <span className="score-label">Interview Score</span>
+          <svg width={"15vw"} height={"30vh"}>
+            {/* Background Circle */}
+            <Circle colour="#E6E6E6" pct={100} radius={styleProps.radius} />
+            {/* Progress Circle */}
+            <Circle colour="#1BD1C2" pct={90} radius={styleProps.radius} />
+            {/* Text Inside Circle */}
+            <Text percentage={98} />
+          </svg>
         </div>
+      </div>
+    </div>
+  </div>
+  <div className="left-text">
+    <h2>AI Video Interviews</h2>
+    <p>
+      An AI-driven virtual interviewer conducts dynamic, adaptive<br />
+      interviews, capturing both technical insights and soft skills.<br />
+      Everything is entirely hands-free.
+    </p>
+  </div>
+</div>
+
 
       {/* Shortlist Section */}
       <div className="shortlist-container">

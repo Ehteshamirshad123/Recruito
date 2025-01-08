@@ -14,6 +14,16 @@
     left: 0;
 }
 
+.bg-recruitment {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    /* Send the image behind other elements */
+    max-width: 391px;
+}
+
 .section {
     display: flex;
     flex-direction: row;
@@ -135,12 +145,20 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 2rem;
-    margin-left: 3.8rem;
+    padding: 3rem;
+    margin-left: 4.3rem;
     background: #FFF;
     border-radius: 25px;
     border: 1px solid #848EA033;
     z-index: 0;
+}
+
+.interview-Search {
+    width: 154px;
+    height: 154px;
+    position: absolute;
+    margin-left: 21rem;
+    margin-top: 11rem;
 }
 
 /* Individual list item styling */
@@ -148,7 +166,8 @@
     display: flex;
     align-items: center;
     width: 450px;
-    padding: 8px;
+    padding-top: 8px;
+    padding-left: 8px;
     background: white;
     border-radius: 10px;
     border: 1px solid #848EA033;
@@ -161,7 +180,8 @@
     align-items: center;
     width: 380px;
     margin-left: 20px;
-    padding: 8px;
+    padding-top: 8px;
+    padding-left: 8px;
     background: white;
     border-radius: 10px;
     border: 1px solid #848EA033;
@@ -174,7 +194,8 @@
     align-items: center;
     width: 360px;
     margin-left: 35px;
-    padding: 8px;
+    padding-top: 8px;
+    padding-left: 8px;
     background: white;
     border-radius: 10px;
     border: 1px solid #848EA033;
@@ -257,6 +278,8 @@
     height: 237px;
 
 }
+
+
 
 .left-text {
     margin: 2%;
@@ -406,10 +429,6 @@
     margin-left: 3.8rem;
 }
 
-.score-circle span {
-    margin-left: 41px;
-}
-
 
 .image-container {
     margin: 3rem 4rem 3rem 3rem;
@@ -431,10 +450,11 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     font-size: 1rem;
     font-weight: bold;
     top: 16%;
-    left: 17rem;
+    left: 16rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -581,6 +601,12 @@
         margin-right: 2rem;
         width: 460px;
     }
+
+    .score-circle {
+        width: 200px;
+        height: 200px;
+        left: 67%;
+    }
 }
 
 
@@ -616,6 +642,14 @@
         font-size: 10px;
     }
 
+    .interview-Search {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        margin-left: 21rem;
+        margin-top: 11rem;
+    }
+
     .candidate-card p {
         font-size: 10px;
     }
@@ -633,8 +667,8 @@
     }
 
     .list-container {
-        padding: 1rem;
-        margin-left: 4rem;
+
+        margin-left: 3.8rem;
     }
 
     .icon.green {
@@ -692,7 +726,7 @@
     .score-circle {
         width: 180px;
         height: 180px;
-        right: 5%;
+        left: 65%;
     }
 
     .shortlist-card {
@@ -803,6 +837,17 @@
         right: 10.2%;
     }
 
+    .list-container {
+        padding: 3rem;
+
+    }
+
+    .interview-Search {
+        position: absolute;
+        margin-left: 15rem;
+        margin-top: 11rem;
+    }
+
     .icon.green {
         width: 50px;
         height: auto;
@@ -824,21 +869,21 @@
     }
 
     .list-item {
-        width: 280px;
+        width: 360px;
         height: auto;
-        padding: 0;
+        padding-bottom: 0;
     }
 
     .list-item1 {
-        width: 250px;
+        width: 300px;
         height: auto;
-        padding: 5px;
+
     }
 
     .list-item2 {
-        width: 220px;
+        width: 260px;
         height: auto;
-        padding: 5px;
+
     }
 
     .left-text h2 {
@@ -903,10 +948,12 @@
         width: 150px;
         height: 150px;
         left: 13rem;
+
     }
 
     .score-circle span {
-        font-size: 10px;
+        font-size: 13px;
+
     }
 
     .check-item.completed {
@@ -953,21 +1000,6 @@
 
     .icon {
         width: 30px;
-    }
-
-    .list-item {
-        width: 250px;
-        padding: 0;
-    }
-
-    .list-item1 {
-        width: 220px;
-        padding: 5px;
-    }
-
-    .list-item2 {
-        width: 200px;
-        padding: 5px;
     }
 
     .left-text h2 {
@@ -1059,18 +1091,19 @@
     }
 
     .list-item {
-        width: 230px;
-        padding: 0;
+        width: 300px;
     }
 
     .list-item1 {
-        width: 200px;
-        padding: 5px;
+        width: 260px;
     }
 
     .list-item2 {
-        width: 180px;
-        padding: 5px;
+        width: 230px;
+    }
+
+    .interview-Search {
+        margin-left: 12rem;
     }
 
     .left-text h2 {
@@ -1134,11 +1167,11 @@
     }
 
     .score-circle {
-        left: 9rem;
+        left: 10.3rem;
     }
 
     .score-circle span {
-        font-size: 10px;
+        font-size: 13px;
     }
 
     .interview-image {
@@ -1200,8 +1233,12 @@
     .score-circle {
         width: 120px;
         height: 120px;
-        right: 23%;
     }
+
+    .image-container {
+        margin: 2rem 2rem 2rem 1rem;
+    }
+
 
     .icon.green {
         width: 40px;
@@ -1220,7 +1257,8 @@
     }
 
     .icon.orange img {
-        width: 30px;
+        width: 40px;
+        height: auto;
     }
 
     .candidate-cards p {
@@ -1282,8 +1320,23 @@
     }
 
     .list-container {
-        padding: 1rem;
+        padding: 2rem;
         margin-left: 1rem;
+    }
+
+    .interview-Search {
+        margin-top: 10rem;
+        margin-left: 13rem;
+        max-width: 120px;
+        max-height: 120px;
+    }
+
+    .left-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .left-text h2 {
+        font-size: 1.2rem;
     }
 
 
@@ -1295,12 +1348,6 @@
         border: 1px solid #848EA033;
         margin-left: 1rem;
         width: 300px;
-    }
-
-    .score-circle {
-        width: 120px;
-        height: 120px;
-        right: 23%;
     }
 
     .bg-box2 {
@@ -1347,6 +1394,13 @@
     .list-container {
         padding: 1rem;
         margin-left: 1rem;
+    }
+
+    .interview-Search {
+        margin-top: 9rem;
+        margin-left: 12rem;
+        max-width: 120px;
+        max-height: 120px;
     }
 
 
@@ -1410,6 +1464,16 @@
 
     }
 
+    .score-circle {
+        width: 139px;
+        height: 152px;
+        left: 55%;
+    }
+
+    .image-container {
+        padding: 2rem;
+        margin: 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1476,14 +1540,16 @@
         width: 300px;
     }
 
-    .score-circle span {
-        margin-left: 20px;
-    }
 
     .score-circle {
         width: 120px;
         height: 120px;
-        right: 25%;
+        left: 55%;
+    }
+
+    .interview-image {
+        width: 209px;
+        height: auto;
     }
 
 
@@ -1608,27 +1674,29 @@
     }
 
     .list-container {
-        padding: 0.5rem;
+        padding: 2rem;
         margin-left: 1rem;
+    }
+
+    .interview-Search {
+        margin-top: 7rem;
+        margin-left: 7rem;
+        max-width: 120px;
+        max-height: 120px;
     }
 
     .list-item {
         width: 200px;
-        height: 50px;
-        padding: 0;
 
     }
 
     .list-item1 {
         width: 170px;
-        height: 50px;
-        padding: 0;
 
     }
 
     .list-item2 {
         width: 150px;
-        height: 50px;
 
     }
 
@@ -1665,11 +1733,12 @@
     .score-circle {
         width: 110px;
         height: 110px;
-        right: 40% !important;
+        left: 55%;
     }
 
     .image-container {
-        margin: 1rem 1rem 1rem 1rem;
+        padding: 1.5rem;
+        margin: 0;
     }
 
     .interview-image {
